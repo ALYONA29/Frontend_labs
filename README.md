@@ -8,7 +8,7 @@ Basic functions:
 
 ~Main feature: visualization
 
-	- each cocktail should have a dynamically generated visual representation based on ingredients selected 	by user upon creation
+	- each cocktail should have a dynamically generated visual representation based on ingredients selected by user upon creation
 
 	- glass form may be identical for all recipes
 
