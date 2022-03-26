@@ -33,7 +33,62 @@
       </div>
     </header>
     <main>
-
+        <article class="cocktail-info">
+            <div class="cocktail-info-main">
+              <div class="cocktail-picture-info">
+                <div class="cocktail-image">
+                  <img src="/images/empty.png" alt="empty">
+                  <div class="cocktail-ingredient cocktail-ingredient1 ice-cream"></div>
+                  <div class="cocktail-ingredient cocktail-ingredient2 milk"></div>
+                  <div class="cocktail-ingredient cocktail-ingredient3 strawberry"></div>
+                </div>
+                <p class="cocktail-title">Strawberry</p>
+                <div class="star-rating">
+                  <input class="star-rating-input" id="star-rating-5" type="radio" name="rating" value="5">
+                  <label class="star-rating-icon fa fa-star" for="star-rating-5"></label>
+                  <input class="star-rating-input" id="star-rating-4" type="radio" name="rating" value="4">
+                  <label class="star-rating-icon fa fa-star" for="star-rating-4"></label>
+                  <input class="star-rating-input" id="star-rating-3" type="radio" name="rating" value="3">
+                  <label class="star-rating-icon fa fa-star" for="star-rating-3"></label>
+                  <input class="star-rating-input" id="star-rating-2" type="radio" name="rating" value="2">
+                  <label class="star-rating-icon fa fa-star" for="star-rating-2"></label>
+                  <input class="star-rating-input" id="star-rating-1" type="radio" name="rating" value="1">
+                  <label class="star-rating-icon fa fa-star" for="star-rating-1"></label>
+                </div>
+              </div>
+              <div class="cocktail-details">
+                <p>Standard value: <span class="cocktail-value">180</span> ml.</p>
+                <ul class="ingredients">
+                  <li class="ingredient"> <span class="ingedient-value">1/3</span> <span class="ingedient-name">Strawberry</span></li>
+                  <li class="ingredient"> <span class="ingedient-value">1/3</span> <span class="ingedient-name">Milk</span></li>
+                  <li class="ingredient"> <span class="ingedient-value">1/3</span> <span class="ingedient-name">Ice-cream</span></li>
+                </ul>
+                <div class="bottom-details">
+                  <p>Average mark: <span class="average-mark">5</span></p>
+                  <p>Added by: <span class="cocktail-author">Administrator</span></p>
+                </div>
+              </div>
+            </div>
+            <p class="cocktail-description">
+              A delicate strawberry cocktail that will cheer you up.
+            </p>
+          </article>
+          <section class="comments-section">
+            <form class="comment-form" action="#" method="post">
+              <textarea name="comment" rows="3" placeholder="Leave your comment here..."></textarea>
+              <input type="submit" name="send" value="Send">
+            </form>
+            <ul class="comments-list">
+              <li class="comment-list-item">
+                <div class="comment">
+                  <div class="comment-info">
+                    <p class="comment-author">Alyona</p>
+                    <time datetime="2022-03-26">26.03.2022</time>
+                  </div>
+                  <p class="comment-text">One of my favorites!</p>
+                </div>
+            </ul>
+          </section>
     </main>
     <footer>
       <div class="contacts">

@@ -33,7 +33,49 @@
       </div>
     </header>
     <main>
-
+        <form class="create-cocktail-form">
+            <div class="cocktail-form-block">
+              <div class="cocktail-form-left">
+                <div class="cocktail-image">
+                  <img src="/images/empty.png" alt="empty">
+                </div>
+                <input type="text" id="cocktail-name" name="cocktail-name" value="" placeholder="Name..." required>
+                <label for="cocktail-value">Standard value:</label>
+                <input type="number" id="cocktail-value" name="cocktail-value" value="" placeholder="ml" required>
+              </div>
+              <div class="cocktail-form-right">
+                <div class="add-ingredients-section">
+                  <ol class="ingredients-select-list">
+                    <li class="ingredient-select-list-item">
+                      <div class="flex-ingredient-wrap">
+                        <select class="ingredients-select" name="ingredients-select">
+                          <option value="ice-cream">Ice-cream</option>
+                          <option value="milk">Milk</option>
+                          <option value="caramel">Caramel</option>
+                        </select>
+                        <input class="ingredient-value-input" type="number" name="ingredient-value" value="" placeholder="Value" required>
+                        <button class="remove-ingredient-button" type="button" name="remove-ingredient-button"><i class="fas fa-minus"></i></button>
+                      </div>
+                    </li>
+                    <li class="ingredient-select-list-item">
+                      <div class="flex-ingredient-wrap">
+                        <select class="ingredients-select" name="ingredients-select">
+                          <option value="ice-cream">Ice-cream</option>
+                          <option value="milk" selected>Milk</option>
+                          <option value="caramel">Caramel</option>
+                        </select>
+                        <input class="ingredient-value-input" type="number" name="ingredient-value" value="" placeholder="Value" required>
+                        <button class="remove-ingredient-button" type="button" name="remove-ingredient-button"><i class="fas fa-minus"></i></button>
+                      </div>
+                    </li>
+                  </ol>
+                  <button id="add-ingredient-button" type="button" name="add-ingredient-button"><i class="fas fa-plus"></i></button>
+                </div>
+                <textarea id="description-textarea" name="name" rows="3" placeholder="Description"></textarea>
+                <button id="create-button" type="submit" name="create-button">Create</button>
+              </div>
+            </div>
+          </form>
     </main>
     <footer>
       <div class="contacts">
