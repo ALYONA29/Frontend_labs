@@ -1,0 +1,332 @@
+main {
+    width: 60%;
+    padding-top: 150px;
+    margin: 0 auto;
+    min-width: 600px;
+  }
+  
+  .cocktail-info-main {
+    display: flex;
+    height: 320px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cocktail-picture-info {
+    height: 100%;
+    width: 40%;
+    background-color: #58d6ec;
+    border-radius: var(--main-border-radius) 0 0 var(--main-border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .cocktail-image {
+    position: relative;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .cocktail-image img {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+  }
+  
+  .cocktail-ingredient {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    height: 143px;
+    width: 109px;
+  }
+  
+  .cocktail-ingredient1 {
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0% 100%);
+  }
+  
+  .cocktail-ingredient2 {
+    clip-path: polygon(0 45%, 100% 45%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 100%, 0% 100%);
+  }
+  
+  .cocktail-ingredient3 {
+    clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0% 100%);
+  }
+  
+  .cocktail-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5em;
+  }
+  
+  /* STAR RATING */
+  .star-rating {
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    text-align: center;
+    background-color: #FBB03B;
+  }
+  
+  .star-rating-icon {
+      float: right;
+      padding-left: 2px;
+      cursor: pointer;
+  }
+  
+  .star-rating-icon:last-child {
+      padding-left: 0;
+  }
+  
+  .star-rating-input {
+      display: none;
+  }
+  .star-rating-icon:hover:before,
+  .star-rating-icon:hover ~ .star-rating-icon:before,
+  .star-rating-input:checked ~ .star-rating-icon:before {
+      color: yellow;
+  }
+  /* STAR RATING END */
+  
+  /* COCKTAIL DETAILS */
+  .cocktail-details {
+    height: 100%;
+    width: 60%;
+    background-color: var(--light-grey-color);
+    border-radius: 0 var(--main-border-radius) var(--main-border-radius) 0;
+    padding: 30px;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ingredients {
+    margin-top: 20px;
+  }
+  
+  .ingredients li {
+    margin-bottom: 5px;
+  }
+  
+  .cocktail-description {
+    background-color: var(--light-grey-color);
+    border-radius: var(--main-border-radius);
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .bottom-details {
+    margin-bottom: 0px;
+    margin-top: auto;
+  }
+  
+  .bottom-details p {
+    margin-top: 5px;
+  }
+  /* COCKTAIL DETAILS END*/
+  
+  .comments-section {
+    background-color: var(--light-grey-color);
+    border-radius: var(--main-border-radius);
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    min-width: 600px;
+  }
+  
+  .comments-section form {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .comments-section textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1em;
+  }
+  
+  .comments-section input[type="submit"] {
+    display: block;
+    margin: 0 0 0 auto;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: white;
+  }
+  
+  .comment-list-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .comment {
+    background-color: white;
+    border-radius: var(--main-border-radius);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+  }
+  
+  .comment-info, .comment-text{
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .comment-info {
+    width: 30%;
+    box-sizing: border-box;
+  }
+  
+  .comment-info p {
+    margin-bottom: 5px;
+  }
+  
+  .comment-text {
+    width: 70%;
+    box-sizing: border-box;
+  }
+  
+  @media only screen
+      and (max-device-width : 500px)
+      and (orientation: portrait) {
+  
+      :root {
+        --main-border-radius: 50px;
+      }
+  
+      main {
+        padding-top: 200px;
+        width: 80%;
+      }
+  
+      .cocktail-info-main {
+        flex-direction: column;
+        height: auto;
+      }
+  
+      .cocktail-picture-info {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border-radius: var(--main-border-radius);
+        margin-bottom: 50px;
+      }
+  
+      .cocktail-details {
+        width: 100%;
+        border-radius: var(--main-border-radius);
+      }
+  
+      .cocktail-image {
+        margin-left: 40px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        height: 300px;
+      }
+  
+      .cocktail-ingredient {
+        position: absolute;
+        left: 12px;
+        top: 0;
+        height: 285px;
+        width: 219px;
+      }
+  
+      .cocktail-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 4em;
+        margin-bottom: 30px;
+      }
+  
+      .star-rating {
+        border-radius: 50px;
+        font-size: 3em;
+        margin-bottom: 20px;
+        padding: 25px;
+      }
+  
+      .star-rating-icon {
+          padding-left: 10px;
+      }
+  
+      .cocktail-details {
+        padding: 30px;
+        font-size: 3em;
+      }
+  
+      .ingredients {
+        margin: 50px;
+      }
+  
+      .ingredients li {
+        margin-bottom: 5px;
+      }
+  
+      .cocktail-description {
+        margin-top: 50px;
+        padding: 30px 50px;
+        font-size: 2.5em;
+      }
+  
+      .comments-section {
+        margin-top: 50px;
+        padding: 40px;
+      }
+  
+      .comments-section textarea {
+        margin-bottom: 30px;
+        padding: 30px;
+        font-size: 2.5em;
+      }
+  
+      .comments-section input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 2.5em;
+      }
+  
+      .comment-list-item {
+        margin-bottom: 30px;
+      }
+  
+      .comment {
+        padding: 30px;
+        font-size: 2.5em;
+      }
+  
+      .comment-info {
+        width: 40%;
+        box-sizing: border-box;
+      }
+  
+      .comment-info p {
+        margin-bottom: 5px;
+      }
+  
+      .comment-text {
+        width: 60%;
+        box-sizing: border-box;
+      }
+  }
