@@ -142,6 +142,10 @@ header a {
   background-color: #f0429f;
 }
 
+.visibility {
+  visibility: visible;
+}
+
 .authorization .sign-up i{
   position: absolute;
   left: 12px;
@@ -333,7 +337,7 @@ footer .contacts .mail-link:hover {
       display: none;
     }
 
-    h3 {
+    h1 {
       font-size: 2.7em;
       position: absolute;
       left: -20px;
@@ -397,6 +401,7 @@ footer .contacts .mail-link:hover {
     .menu-list {
       top: 80px;
       padding-top: 48px;
+      left: -30px;
     }
 
     .menu-list li {
@@ -405,6 +410,10 @@ footer .contacts .mail-link:hover {
       background-color: #e775b2;
       font-size: 2.5em;
       width: 300px;
+    }
+
+    .visibility {
+      display: none;
     }
 
     footer {
