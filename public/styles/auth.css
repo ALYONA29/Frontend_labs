@@ -9,7 +9,7 @@ section {
   width: 100%;
 }
 
-main form {
+.form-style {
   width: 60%;
   background-color:#58d6ec;
   margin: 0 auto;
@@ -19,11 +19,11 @@ main form {
   font-size: 1.5em;
 }
 
-main label{
-    color: var(--color-input);
+.label-style {
+  color: var(--color-input);
 }
 
-main form input {
+.form-input-style {
   width: 100%;
   font-size: 1.2em;
   box-sizing: border-box;
@@ -34,7 +34,7 @@ main form input {
   border-style: solid;
 }
 
-main form button {
+.form-button-style {
   display: block;
   margin: 10px 0 0 auto;
   font-size: inherit;
@@ -43,6 +43,10 @@ main form button {
   border-radius: 30px;
   border-style: solid;
   color: black;
+}
+
+.form-button-style:hover {
+  background-color:#00aaff;
 }
 
 @media only screen
@@ -54,20 +58,20 @@ main form button {
       padding-top: 20vh;
     }
 
-    main form {
+    .form-style {
       width: 100%;
       border-radius: 40px;
       padding: 70px 90px;
       font-size: 2.5em;
     }
 
-    main form input {
+    .form-input-style {
       padding: 10px;
       margin-bottom: 40px;
       margin-top: 15px;
     }
 
-    main form button {
+    .form-button-style {
       padding: 10px 20px;
     }
 }

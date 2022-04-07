@@ -61,6 +61,10 @@ header .header-search button {
   cursor: pointer;
 }
 
+header .header-search button:hover {
+  background-color:#646b6f;
+}
+
 header a {
   color: white;
   text-decoration: none;
@@ -76,6 +80,10 @@ header a {
   left: 10px;
   top: 10px;
   background-color: #f0429f;
+}
+
+.logo:hover {
+  background-color: #e8027d;
 }
 
 .logo img {
@@ -142,6 +150,10 @@ header a {
   background-color: #f0429f;
 }
 
+.authorization .sign-up:hover {
+  background-color: #e8027d;
+}
+
 .visibility {
   visibility: visible;
 }
@@ -161,6 +173,10 @@ header a {
   right: 20px;
   top: 10px;
   background-color: #f0429f;
+}
+
+.authorization .login:hover {
+  background-color: #e8027d;
 }
 
 .authorization .login i{
@@ -389,6 +405,10 @@ footer .contacts .mail-link:hover {
       right: 8px;
       top: 32px;
       background-color: #f0429f;
+    }
+
+    .authorization .login:hover{
+      background-color: #e8027d;
     }
     
     .authorization .login i{

@@ -6,6 +6,10 @@ main {
   min-width: 700px;
 }
 
+.button-style:hover {
+  background-color:#00aaff;
+}
+
 .cocktail-main-div {
   display: flex;
   margin-top: 100px;
@@ -160,6 +164,10 @@ align-items: center;
   background-color:  #bdebee;
 }
 
+#create-button:hover {
+  background-color:#00aaff;
+}
+
 #description {
   border-radius: 15px;
   padding: 10px;
@@ -204,6 +212,10 @@ align-items: center;
   border-style: solid;
 }
 
+.remove-ingredient:hover {
+  background-color:#535a5d;
+}
+
 #add-ingredient {
   width: 50px;
   height: 50px;
@@ -214,6 +226,10 @@ align-items: center;
   background-color: white;
   color: #1bb0dd;
   border-style:solid;
+}
+
+#add-ingredient:hover {
+  background-color:#535a5d;
 }
 
 
