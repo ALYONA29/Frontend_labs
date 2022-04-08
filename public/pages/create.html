@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Delicious cocktails</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/create-cocktail.css">
+    <link rel="stylesheet" href="/styles/ingredients.css">
+    <script src="https://kit.fontawesome.com/c25464de2f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-menu">
+        <div class="header-title">
+          <h1><a href="#">Cocktails <i class="fas fa-bars"></i></a></h1>
+        </div>
+        <nav class="main-navigation">
+          <ul class="menu-list visibility">
+            <li><a href="/index.html">Menu</a></li>
+            <li><a href="/pages/create.html">Create</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo">
+        <a href="/index.html"><img src="/images/logo.png" alt="logo"></a>
+      </div>
+      <div class="header-search">
+        <form class="" action="#" method="post">
+          <input type="text" name="search-input" placeholder="Search...">
+          <button type="button" name="search-button"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <div class="authorization">
+        <a href="/pages/register.html" class="sign-up" id="signup-link" title='signup'><i class="fas fa-user-plus"></i></a>
+        <a href="/pages/login.html" class="login" id="login-link" title='login'><i class="fa fa-sign-in"></i></a>
+      </div>
+    </header>
+    <main>
+      <form class="create-cocktail-form">
+        <div class="cocktail-main-div">
+          <div class="cocktail-round-image">
+            <div class="cocktail-left-div">
+                <div class="cocktail-image">
+                  <picture>
+                    <img src="/images/empty.png" alt="empty">
+                  </picture>
+                </div>
+            </div>
+          </div>
+          <div class="cocktail-right-div">
+            <div class="cocktail-value-div">
+                <input type="text" id="beauty-input" name="cocktail-name" value="" placeholder="ENTER A NAME HERE..." required>
+                <div class="cocktail-value-str">
+                  <label for="cocktail-value">STANDARD VALUE:</label>
+                  <input type="number" id="beauty-input-number" name="cocktail-value" value="" placeholder="ml" required>
+                </div>
+            </div>
+            <div class="ingredients-menu">
+              <ol class="ingredients-list">
+                    <li class="ingredient-desc">
+                        <div class="ingredient-value">
+                            <select class="ingredients-select" name="ingredients-select">
+                            <option value="ice-cream">Ice-cream</option>
+                            <option value="milk">Milk</option>
+                            <option value="strawberry">Strawberry</option>
+                            </select>
+                            <input class="input_value" type="number" name="ingredient-value" value="" placeholder="VALUE" required>
+                            <button class="remove-ingredient" type="button" name="remove-ingredient"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </li>
+                    <li class="ingredient-desc">
+                        <div class="ingredient-value">
+                            <select class="ingredients-select" name="ingredients-select">
+                            <option value="ice-cream">Ice-cream</option>
+                            <option value="milk">Milk</option>
+                            <option value="strawberry">Strawberry</option>
+                            </select>
+                            <input class="input_value" type="number" name="ingredient-value" value="" placeholder="VALUE" required>
+                            <button class="remove-ingredient" type="button" name="remove-ingredient"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </li>
+                    <li class="ingredient-desc">
+                        <div class="ingredient-value">
+                            <select class="ingredients-select" name="ingredients-select">
+                            <option value="ice-cream">Ice-cream</option>
+                            <option value="milk">Milk</option>
+                            <option value="strawberry">Strawberry</option>
+                            </select>
+                            <input class="input_value" type="number" name="ingredient-value" value="" placeholder="VALUE" required>
+                            <button class="remove-ingredient" type="button" name="remove-ingredient"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </li>
+              </ol>
+              <button id="add-ingredient" type="button" name="add-ingredient"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="create-final">
+          <textarea id="description" name="name" rows="3" placeholder="DESCRIPTION"></textarea>
+          <button id="create-button" type="submit" name="create-button">CREATE</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="contacts">
+        <a href="https://vk.com/id445949560" class="vk-link"><i class="fab fa-vk"></i></a>
+        <a href="mailto:alyonazapetskaya@mail.ru" class="mail-link"><i class="far fa-envelope"></i></a>
+      </div>
+      <p class="copyright">Created by Alyona Zapetskaya </p>
+    </footer>
+  </body>
+</html>
