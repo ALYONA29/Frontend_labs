@@ -4,217 +4,61 @@
     <meta charset="utf-8">
     <title>Delicious cocktails</title>
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/catalog.css">
-    <link rel="stylesheet" href="/styles/ingredients.css">
+
+    <script src="/pages/registrate.js"></script>
+    <script src="/pages/login.js"></script>
+    <script src="/pages/catalog.js"></script>
+    <script src="/pages/create.js"></script>
+    <script src="/pages/cocktail-info.js"></script>
+    <script src="/pages/404.js"></script>
+
+    <script src="/functions/picture.js"></script>
+    <script src="/models/comment.js"></script>
+    <script src="/models/ingredient.js"></script>
+    <script src="/models/cocktail.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+    <script src="/functions/db.js"></script>
+
     <script src="https://kit.fontawesome.com/c25464de2f.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a id="image-link"><img src="/images/logo.png" alt="logo"></a>
+      </div>
       <div class="main-menu">
         <div class="header-title">
-          <h1><a href="#">Cocktails <i class="fas fa-bars"></i></a></h1>
+          <h1><a href="#" onclick="return false;">Cocktails <i class="fas fa-bars"></i></a></h1>
         </div>
         <nav class="main-navigation">
           <ul class="menu-list visibility">
-            <li><a href="/index.html">Menu</a></li>
-            <li><a href="/pages/create.html">Create</a></li>
+            <li><a id="catalog-link">Menu</a></li>
+            <li><a id="create-link">Create</a></li>
           </ul>
         </nav>
       </div>
-      <div class="logo">
-        <a href="/index.html"><img src="/images/logo.png" alt="logo"></a>
-      </div>
       <div class="header-search">
-        <form class="" action="#" method="post">
-          <input type="text" name="search-input" placeholder="Search...">
-          <button type="button" name="search-button"><i class="fas fa-search"></i></button>
+        <form class="search-form" onsubmit="searchCocktail(); return false;">
+          <input type="text" id="search-input" name="search-input" placeholder="Search..." autocomplete="off">
+          <button type="submit" name="search-button"><i class="fas fa-search"></i></button>
         </form>
+        <ul id="search-result" class="search-list"></ul>
       </div>
       <div class="authorization">
-        <a href="/pages/register.html" class="sign-up" id="signup-link" title='signup'><i class="fas fa-user-plus"></i></a>
-        <a href="/pages/login.html" class="login" id="login-link" title='login'><i class="fa fa-sign-in"></i></a>
+        <a class="sign-up" id="signup-link" title='signup'><i class="fas fa-user-plus"></i></a>
+        <a class="login" id="login-link" title='login'><i class="fa fa-sign-in"></i></a>    
+        <a class="login" id="logout-link" title='logout'><i class="fa fa-sign-in"></i></a>
       </div>
     </header>
-    <main>
-      <div class="sort-section"> 
-      </div>
-        <section class="catalog-grid">
-        <a class = "rating" href="/pages/cocktail-info.html">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 milk"></div>
-                <div class="cocktail-ingredient_n ingredient3 strawberry"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Strawberry</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 cherry"></div>
-                <div class="cocktail-ingredient_n ingredient3 currant"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Berry mix</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 milk"></div>
-                <div class="cocktail-ingredient_n ingredient3 banana"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Banana</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 caramel"></div>
-                <div class="cocktail-ingredient_n ingredient3 chocolate"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Chocolate</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 milk"></div>
-                <div class="cocktail-ingredient_n ingredient3 mint"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Mint</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 honey"></div>
-                <div class="cocktail-ingredient_n ingredient3 mint"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Honey</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 milk"></div>
-                <div class="cocktail-ingredient_n ingredient3 pineapple"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Pineapple</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-              </div>
-          </div>
-        </a>
-        <a class = "rating" href="#">
-          <div class="box">
-              <div class="image-box">
-                <picture>
-                  <img src="/images/empty.png" alt="empty">
-                </picture>
-                <div class="cocktail-ingredient_n ingredient1 ice-cream"></div>
-                <div class="cocktail-ingredient_n ingredient2 milk"></div>
-                <div class="cocktail-ingredient_n ingredient3 caramel"></div>
-              </div>
-              <div class="details">
-                <p class="cocktail-title">Caramel</p>
-                <div class="grid-item-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-              </div>
-          </div>
-        </a>
+    <main id="root">	
+      <script src="/functions/main.js"></script>
+      <script src="/functions/links.js"></script>
+      <script src="/functions/auth.js"></script>
+      <script src="/functions/search.js"></script>
     </main>
     <footer>
       <div class="contacts">
